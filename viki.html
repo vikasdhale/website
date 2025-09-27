@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Monoton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33042e1aad.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family:' poppins',sans-serif;
+
+        }
+        .nav{
+            color: #fff;
+            background-color: #45474B;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            justify-content: space-around;
+            width: 100%;
+
+        }
+        .me  {
+            display: flex;
+            margin-right: 60px;
+            
+            height: 40px;
+            width: 800px;
+            align-items: center;
+            justify-content: flex-end;
+            
+        
+        
+
+        }
+        .me li{
+            display: flex;
+            padding: 20px;
+
+        }
+        #vikas{
+            display: flex;
+            align-items: center;
+            margin-right: 100px;
+            transition: 0.3s ease;
+            font-weight: 600;
+            font-size: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        #vikas:hover {
+            color: orangered;
+            text-shadow: 0 0 25px orangered;
+            transform: scale(1.1);
+        }
+        .me li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            
+            transition: 0.3 ease;
+        }
+        .nav{
+            color: white;
+        }
+        .me li a:hover{
+            color: orangered;
+            border-bottom: 3px solid red;
+        }
+        #button{
+            padding: 10px 28px ;
+            color: black;
+            font-weight: 600;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            background-color: #fff;
+            transition: 0.3 ease;
+        }
+        #button:hover{
+            background-color: orangered;
+            box-shadow: 0 0 25px orangered;
+            color: #fff;
+        }
+        .home{
+            width: 100%;
+            min-height: 100vh;
+            background: rgb(241,241,241);
+            display: flex;
+            align-items: center;
+            gap:7em;
+            padding: 30px 12%;
+            
+        }
+        img{
+            height: 680px;
+        }
+        .home-content{
+            max-width: 800px;
+            margin-bottom: 300px;
+            
+        }
+        .home-content h3{
+            font-size: 42px;
+        }
+        .home-content h1{
+            font-size: 62px;
+        }
+        .home-content p{
+            font-size: 18px;
+            margin: 25px 0 30px;
+        }
+        .btn-box{
+           width: 345px;
+           display: flex;
+           gap: 2em;
+        }
+        .home-content span{
+            color: orangered;
+        }
+        .btn-1{
+            padding: 15px 28px ;
+            background-color: black;
+            color: white;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3 ease;
+            
+        }
+        .btn-1:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+        .btn-2{
+            padding: 15px 28px ;
+            background-color: orangered;
+            color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px ;
+            font-weight: 600;
+            transition: 0.3 ease;
+            cursor: pointer;
+        }
+        .btn-2:hover{
+            background-color: white;
+            color: orangered;
+        }
+        .img-box img{
+            border-radius: 50%;
+            width: 540px;
+        }
+        .img-box{
+            margin-bottom: 100px;
+        }
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: orangered;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: black;
+            width: 50px;
+        }
+        .about{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background: black;
+        }
+        .about-img img{
+            position: relative;
+            width: 550px;
+            box-shadow: 0 0 25px orangered,
+                        0 0 50px orangered;
+            border-radius: 50%;
+        }
+        .about-content h2{
+            text-align: left;
+            color: white;
+            font-size: 42px;
+        }
+        .about-content h3{
+            font-size: 62px;
+            color: white;
+        }
+        .about-content p{
+            color: white;
+            font-size: 20px;
+            margin: 2em 0 3em;
+        }
+        .about-content span{
+            color: orangered;
+        }
+        .btn-2{
+            text-decoration: none;
+        }
+        .contact-form h2{
+            text-align: center;
+            margin-top: 3em;
+            margin-bottom: 1em;
+            font-size: 36px;
+        }
+        .contact-form form{
+            max-width: 50em;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        .contact-form form .input-box{
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+        }
+        
+        .contact-form form textarea{
+            width: 100%;
+            padding: 1.5em;
+            font-size: 18px;
+            color: black;
+            background:rgb(241, 241,241);
+            
+            margin: 1rem 0;
+            resize: none;
+        }
+        .contact-form form .input-box input{
+            width: 100%;
+            padding: 1.5em;
+            font-size: 18px;
+            color: black;
+            background:rgb(241, 241,241);
+            border-radius: 1rem;
+            margin: 1rem 0;
+            resize: none;
+        }
+        .footer{
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 40px 0;
+            background-color: black;
+        }
+        .footer .social{
+            text-align: center;
+            padding-bottom: 25px;
+            color: white;
+        }
+        .social a{
+            font-size: 24px;
+            color: white;
+            border: 2px solid orangered;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+            box-shadow: inset 0 0 10px orangered 0 0 10px transparent;
+            transition: 0.3s ease;
+        }
+        .social a:hover{
+            transform: scale(1.2)translateY(-10px);
+            color: orangered;
+            border: 2px solid orangered;
+        }
+
+            
+        
+        .footer ul{
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .footer ul li a{
+            color: white;
+            border-bottom: 3px solid transparent;
+            transition: 0.3 ease;
+        }
+        .footer ul li a:hover{
+            border-bottom: 3px solid orangered;
+        }
+        .footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+        .footer .copyright{
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+        } 
+        #menu{
+            display: none;
+        }
+
+        @media  screen and (min-width:320px) and (max-width:767px) {
+
+            .nav{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                display: block;
+            }
+            li a{
+                display: none;
+            }
+            .me{
+                width: 100% !important;
+                height: 100%;
+            }
+            #button{
+                display: none;
+            }
+            .home{
+                width: 100%;
+                height: 100%;
+            }
+            .home-content{
+                width: 100%;
+                height: 100%;
+                padding: 0px;
+              
+            }.img-box img{
+                height: 100px;
+                width: 100px;
+            }.about-img img{
+                height: 100px;
+                width: 100px;
+                 
+            }
+            .home-content p{
+                 font-size: 20px;
+                 font-weight: 600px;
+                 color: red;
+            }
+            .about-content{
+                width: 100% !important;
+            }
+            .about-content h2{
+                font-size: 10px;
+            }.about-content h3{
+                font-size: 18px;
+            }.about-content p{
+                font-size: 12px;
+            }.footer{
+                width: 100%;
+            }.contact-form{
+                width: 100%;
+            }body{
+                overflow-x: hidden;
+            }
+        }
+        
+    
+    
+        
+
+
+
+    </style>
+</head>
+<body>
+    <header class="nav">
+         <ul class="me">
+            <h2 id="vikas">vikas</h2>
+            <li><a href="#" class="active">portfoli</a></li>
+            <li><a href="#">services</a></li>
+            <li> <a href="#">Experience</a></li>
+            <li> <a href="#">project</a></li>
+            <li><a href="#">Eduction</a></li>
+         </ul>
+         <button id="button">contact me</button>
+         <i class="fa-solid fa-bars fa-" id="menu"></i>
+
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+
+            <h1>I`m<span> vikas<br></span> a Frontend Developer</h1>
+            
+                
+               <p> I am a passionate frontend developer with a keen eye for design and a knack for creating delightful user experiences. With [X] years of experience in crafting pixel-perfect, responsive websites and web applications, I thrive on turning complex problems into simple, beautiful interfaces.</p>
+                
+            <div class="btn-box">
+                <button class="btn-1">Hire Me </button>
+                <button class="btn-2">Experience</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="vikas.jpg" alt="">
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-img">
+            <img src="vikas.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About<span> Me</span></h2>
+            <h3>Frontend<span>Developer</span></h3>
+            <p>My journey began with a fascination for how users interact with digital experiences, which led me to specialize in HTML, CSS, and JavaScript. I have a solid understanding of modern frontend frameworks such as React, Vue.js, or Angular, and I am always eager to stay updated with the latest technologies and trends in the frontend development world.</p>
+            <a href="#" class="btn-2">Experience</a>
+        </div>
+    </section>
+    <section class="contact-form">
+              <h2 class="contact-me">Contact<span>Me</span></h2>
+
+
+              <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn-1">
+              </form>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="#" id="a"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            
+        </div>
+        <ul>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About me</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy police</a>
+            </li>
+        </ul>
+        <p class="copyright">@ 2024 vikas | All Rights Reserved</p>
+
+
+    </footer>
+    
+</body>
+</html>
